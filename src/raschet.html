@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/_head.htm',{
+"title":"Отправить проект на расчет"
+})
+
+<body style="overflow-x: hidden;">
+	<div class="wrapper">
+		@@include('html/_header.htm',{})
+		<main class="page">
+			<section class="banner__section">
+				<div class="banner__container">
+					<div class="banner__body">
+						<img src="img/banner/banner.gif" alt="">
+					</div>
+				</div>
+			</section>
+			<section class="raschet__section">
+				<div class="raschet__container">
+					<div class="raschet__body">
+						<div class="popup__text">
+							<div class="popup__title main__right-title">
+								<h2>Отправить проект на расчет</h2>
+							</div>
+							<div class="popup__body">
+								<div class="popup__input main__right-form">
+									<form id="callback" data-popup-message="#popup__message" data-dev action="" method=""
+										class="popup__form">
+										<div class="form__item">
+											<p class="popup__subtitle main__right-subtitle">Как Вас зовут?</p>
+											<input class="input">
+										</div>
+										<div class="form__item">
+											<p class="popup__subtitle main__right-subtitle">Как с Вами связаться?</p>
+											<input class="input" required placeholder="Телефон или e-mail">
+										</div>
+										<div class="form__item">
+											<p class="popup__subtitle main__right-subtitle">Ссылка на проект с другого сайта</p>
+											<input class="input">
+										</div>
+										<div class="form__item">
+											<p class="popup__subtitle main__right-subtitle">Свой проект (форматы doc, jpg, gif,
+												pdf)</p>
+											<input class="input" type="file">
+										</div>
+										<div class="form__item">
+											<p class="popup__subtitle main__right-subtitle">Дополнительная информация</p>
+											<textarea class="input" type="file"></textarea>
+										</div>
+										<button class="button" form="callback" type="submit">Отправить</button>
+									</form>
+									<p class="popup__politics main__right-politics">
+										Нажимая кнопку, вы даете согласие на <a href="privacy.html" target="_blank">обработку
+											персональных данных</a>
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+		@@include('html/_footer.htm',{})
+	</div>
+
+	@@include('html/_popup.htm',{})
+	@@include('html/_js.htm',{})
+</body>
+
+</html>

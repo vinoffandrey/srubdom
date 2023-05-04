@@ -1,0 +1,217 @@
+body::after {
+	content: "";
+	background-color: rgba(0, 0, 0, 0.5);
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	opacity: 0;
+	transition: opacity 0.8s ease 0s;
+	pointer-events: none;
+	z-index: 149;
+}
+body.popup-show::after {
+	opacity: 1;
+}
+.popup {
+	position: fixed;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	z-index: 100;
+	padding: rem(30) rem(10);
+	transition: visibility 0.8s ease 0s;
+	visibility: hidden;
+	z-index: 150;
+	pointer-events: none;
+}
+.popup_show {
+	visibility: visible;
+	overflow: auto;
+	pointer-events: auto;
+}
+.popup_show .popup__content {
+	visibility: visible;
+	transform: scale(1);
+}
+.popup__wrapper {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	min-height: 100%;
+	flex: 1 1 auto;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.popup__content {
+	visibility: hidden;
+	text-align: center;
+	transform: scale(0);
+	transition: transform 0.3s ease 0s;
+	background-color: #eee;
+	padding: rem(40);
+	width: 100%;
+	max-width: rem(450);
+	border-radius: rem(20);
+	.lock & {
+		visibility: visible;
+	}
+	@media (max-width: $mobileSmall) {
+		padding: rem(20);
+	}
+}
+
+.popup {
+	&__close {
+		position: absolute;
+		right: -10px;
+		top: -10px;
+		width: 25px;
+		height: 25px;
+		background-color: #eee;
+		border-radius: 50%;
+		border: 1px solid #000;
+		&::before {
+			content: "";
+			top: 11px;
+			left: 4px;
+			position: absolute;
+			background-color: #000;
+			width: 15px;
+			height: 2px;
+			transform: rotate(45deg);
+		}
+		&::after {
+			content: "";
+			top: 11px;
+			left: 4px;
+			position: absolute;
+			background-color: #000;
+			width: 15px;
+			height: 2px;
+			transform: rotate(-45deg);
+		}
+	}
+
+	&__text {
+	}
+
+	&__title {
+		font-family: $fontFamily;
+		font-weight: 900;
+		font-size: 28px;
+		color: $mainColor;
+		@include adaptiveValue("margin-bottom", 20, 17, $containerWidth, $minWidth, 1);
+	}
+
+	&__subtitle {
+		font-family: $fontFamily;
+		font-weight: 400;
+		font-size: 16px;
+		color: $mainColor;
+		line-height: 1.6;
+		@include adaptiveValue("margin-bottom", 10, 5, $containerWidth, $minWidth, 1);
+	}
+
+	&__body {
+	}
+
+	&__input {
+	}
+
+	&__form {
+	}
+
+	&__politics {
+	}
+}
+.button {
+	@include adaptiveValue("margin-top", 10, 5, $containerWidth, $minWidth, 1);
+}
+.main {
+	&__right-title {
+		color: #44B759;
+	}
+
+	&__right-text {
+	}
+
+	&__right-form {
+		input, textarea {
+			width: 100%;
+			height: auto;
+			line-height: 1.2;
+			box-shadow: none;
+			position: relative;
+			background-color: #e9e9e9;
+			color: rgba(0, 0, 0, 0.5);
+			border: none;
+			border-radius: 5px;
+			padding: 16px 12.8px;
+			font-size: 16px;
+			cursor: initial;
+			list-style: none;
+			@include adaptiveValue("margin-bottom", 20, 17, $containerWidth, $minWidth, 1);
+			&:focus {
+				outline: none;
+			}
+		}
+		textarea {
+			@include adaptiveValue("height", 150, 100, $containerWidth, $minWidth, 1);
+		}
+		button {
+			letter-spacing: 0.1em;
+			text-transform: uppercase;
+			background-color: #44B759;
+			color: white;
+			font-family: $fontFamily;
+			font-weight: 400;
+			font-size: 14px;
+			padding: 25px 0;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			max-width: 100%;
+			width: 100%;
+			border-radius: 5px;
+			transition: 150ms transform;
+			box-shadow: 0 0px 0px 0px rgb(0 0 0 / 30%);
+			position: relative;
+			overflow: hidden;
+			cursor: pointer;
+			transition: all 0.3s ease 0s;
+			@include adaptiveValue("margin-bottom", 20, 17, $containerWidth, $minWidth, 1);
+			@media (any-hover: hover){
+				&:hover{
+					background-color: rgba(68, 183, 89, .8);
+				} 
+			}
+		}
+	}
+
+	&__right-subtitle {
+		text-align: left;
+		font-family: $fontFamily;
+		font-weight: 400;
+		font-size: 14px;
+		color: #333;
+		opacity: 0.8;
+	}
+
+	&__right-politics {
+		font-family: $fontFamily;
+		font-weight: 400;
+		font-size: 14px;
+		line-height: 1.6;
+		a {
+			border-bottom: 1px dashed #333;
+			transition: all 0.3s ease 0s;
+		}
+	}
+}
+
+

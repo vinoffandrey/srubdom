@@ -1,0 +1,107 @@
+// Заголовки, общие БЄМ блоки и проче...
+.text-14 {
+	@include adaptiveValue("font-size", 14, 14, $containerWidth, $minWidth, 1);
+	line-height: 17px;
+	font-weight: 600;
+}
+.text-18 {
+	@include adaptiveValue("font-size", 18, 15, $containerWidth, $minWidth, 1);
+	line-height: 22px;
+	font-weight: 900;
+}
+.title-30 {
+	@include adaptiveValue("font-size", 30, 25, $containerWidth, $minWidth, 1);
+	font-weight: 900;
+	@include adaptiveValue("line-height", 45, 25, $containerWidth, $minWidth, 1);
+}
+.text-15 {
+	@include adaptiveValue("font-size", 15, 14, $containerWidth, $minWidth, 1);
+	line-height: 25px;
+	font-weight: 500;
+	&.bold {
+		font-weight: 700;
+	}
+}
+//========================================================================================================================================================
+
+
+
+.photos-slider {
+
+	&__arrows {
+		display: flex;
+		gap: 20px;
+		width: 100px;
+		@media(max-width: 500px) {
+			width: 85px;
+			gap: 15px;
+		}
+	}
+
+	&__arrow {
+		flex: 0 1 40px;
+		height: 40px;
+		background-color: #48CD60;
+		border-radius: 4px;
+		cursor: pointer;
+		transition: all .3s ease 0s;
+		background-image: url('../img/icons/arrow.svg');
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: 15px;
+		&:hover, &:active, &:focus {
+			background-color: #18852C;
+		}
+		@media(max-width: 500px) {
+			flex: 0 1 35px;
+			height: 35px;
+		}
+	}
+
+	&__arrow-next {
+		transform: rotate(180deg);
+	}
+
+	&__arrow-prev {
+	}
+}
+
+.stati-slider {
+
+	&__arrows {
+		display: flex;
+		gap: 20px;
+		width: 100px;
+		@media(max-width: 500px) {
+			width: 85px;
+			gap: 15px;
+		}
+	}
+
+	&__arrow {
+		flex: 0 1 40px;
+		height: 40px;
+		background-color: #48CD60;
+		border-radius: 4px;
+		cursor: pointer;
+		transition: all .3s ease 0s;
+		background-image: url('../img/icons/arrow.svg');
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: 15px;
+		&:hover, &:active, &:focus {
+			background-color: #18852C;
+		}
+		@media(max-width: 500px) {
+			flex: 0 1 35px;
+			height: 35px;
+		}
+	}
+
+	&__arrow-next {
+		transform: rotate(180deg);
+	}
+
+	&__arrow-prev {
+	}
+}

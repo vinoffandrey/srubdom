@@ -1,0 +1,88 @@
+//====================================================================================================
+
+//====================================================================================================
+.footer {
+	background-color: #22542B;
+	&__container {
+	}
+
+	&__body {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding-top: 10px;
+		padding-bottom: 10px;
+		gap: 15px;
+		@media(max-width: 900px) {
+			flex-wrap: wrap;
+		}
+	}
+
+	&__left {
+		flex: 0 0 60px;
+		@media(max-width: 900px) {
+			display: none;
+		}
+	}
+
+	&__logo {
+	}
+
+	&__menu {
+		flex: 0 1 646px;
+	}
+
+	&__nav {
+	}
+
+	&__list {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		gap: 15px;
+		@media(max-width: 600px) {
+			flex-direction: column;
+			gap: 5px;
+			align-items: flex-start;
+		}
+	}
+
+	&__link {
+		color: #FFFFFF;
+		border-bottom: 1px dashed #22542B;
+		padding: 10px 0;
+		transition: all .3s ease 0s;
+		&:hover, &:active, &:focus {
+			border-bottom: 1px dashed #FFFFFF;
+		}
+		@media(max-width: 600px) {
+			padding: 5px 0;
+		}
+	}
+
+	&__right {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-end;
+		flex: 0 0 180px;
+		@media(max-width: 900px) {
+			flex: 1 1 100%;
+		}
+	}
+
+	&__phone {
+		color: #FFFFFF;
+		margin-bottom: 5px;
+	}
+
+	&__callback {
+		color: #FFFFFF;
+		a {
+			border-bottom: 1px dashed #FFFFFF;
+			transition: all .3s ease 0s;
+			&:hover {
+				border-bottom: 1px dashed #22542B;
+			}
+		}
+	}
+}

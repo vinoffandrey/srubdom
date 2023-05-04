@@ -1,0 +1,36 @@
+.photos {
+
+	&__section {
+	}
+
+	&__container {
+	}
+
+	&__title {
+	}
+
+	&__body {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 15px;
+		@include adaptiveValue("margin-top", 30, 20, $containerWidth, $minWidth, 1);
+	}
+
+	&__body-item{
+		flex: 1 1 18%;
+		@include adaptiveValue("height", 120, 100, $containerWidth, $minWidth, 1);
+		cursor: pointer;
+		position: relative;
+		max-width: 18%;
+
+		@media(max-width: $mobile) {
+			flex: 1 1 23%;
+			max-width: 50%;
+		}
+		@media(max-width: $mobileSmall) {
+			flex: 1 1 45%;
+			max-width: 50%;
+		}
+	}
+}
+

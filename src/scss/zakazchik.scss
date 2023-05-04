@@ -1,0 +1,83 @@
+.zakazchik {
+	&__section {
+		flex: 1 1 auto;
+		@include adaptiveValue("padding-top", 150, 100, $containerWidth, $minWidth, 1);
+		@include adaptiveValue("margin-bottom", 100, 40, $containerWidth, $minWidth, 1);
+		height: 100%;
+		position: relative;
+		.obl {
+			position: absolute;
+			right: 0;
+			top: 0;
+			width: 473px;
+			height: 750px;
+			background-image: url('../img/photoreport/obl.png');
+			background-position: right center;
+			background-size: contain;
+			background-repeat: no-repeat;
+			z-index: -1;
+		}
+		.obl_2 {
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 473px;
+			height: 750px;
+			background-image: url('../img/photoreport/obl_2.png');
+			background-position: left top;
+			background-size: contain;
+			background-repeat: no-repeat;
+			z-index: -1;
+		}
+		.home {
+			position: absolute;
+			right: 0;
+			bottom: 0;
+			background-image: url('../img/rasrochka/home_2.png');
+			background-size: contain;
+			background-repeat: no-repeat;
+			background-position: right bottom;
+			@include adaptiveValue("width", 930, 275, 1800, 600, 1);
+			@include adaptiveValue("height", 659, 200, $containerWidth, $minWidth, 1);
+			z-index: -1;
+			@media(max-width: 760px) {
+				display: none;
+			}
+		}
+	}
+	&__container {
+		.rasrochka__buttom {
+			@include adaptiveValue("margin-top", 40, 20, $containerWidth, $minWidth, 1);
+		}
+	}
+	&__body {
+		@include adaptiveValue("margin-top", 30, 20, $containerWidth, $minWidth, 1);
+		max-width: 600px;
+		ul {
+			@include adaptiveValue("margin-top", 20, 10, $containerWidth, $minWidth, 1);
+			@include adaptiveValue("margin-bottom", 20, 10, $containerWidth, $minWidth, 1);
+			li {
+				list-style:	disc;
+				@include adaptiveValue("margin-left", 30, 15, $containerWidth, $minWidth, 1);
+				margin-bottom: 5px;
+				&::marker {
+					font-size: 12px;
+				}
+			}
+		}
+		a {
+			margin-top: 5px;
+		}
+	}
+	&__item {
+		@include adaptiveValue("margin-bottom", 20, 10, $containerWidth, $minWidth, 1);
+		span {
+			font-weight: 700;
+		}
+		img {
+			max-width: 100%;
+			height: auto;
+			width: 100%;
+		}
+	}
+}

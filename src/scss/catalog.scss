@@ -1,0 +1,82 @@
+.catalogs {
+
+	&__section {
+		@include adaptiveValue("padding-top", 150, 100, $containerWidth, $minWidth, 1);
+		position: relative;
+		.obl {
+			position: absolute;
+			right: 0;
+			top: 0;
+			width: 473px;
+			height: 750px;
+			background-image: url('../img/photoreport/obl.png');
+			background-position: right center;
+			background-size: contain;
+			background-repeat: no-repeat;
+			z-index: -1;
+		}
+		.obl_2 {
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 473px;
+			height: 750px;
+			background-image: url('../img/photoreport/obl_2.png');
+			background-position: left top;
+			background-size: contain;
+			background-repeat: no-repeat;
+			z-index: -1;
+		}
+	}
+
+	&__container {
+	}
+
+	&__title {
+	}
+
+	&__body {
+		@include adaptiveValue("margin-top", 50, 25, $containerWidth, $minWidth, 1);
+		display: flex;
+		flex-wrap: wrap;
+		gap: 24px;
+		@media(max-width: 420px) {
+			flex-direction: column;
+		}
+	}
+
+	&__item {
+		flex: 0 1 calc(50% - 12px);
+		border: 1px dashed #DBD471;
+		border-radius: 15px;
+		background-color: white;
+		@media(max-width: 420px) {
+			flex: 1 1 100%;
+		}
+		a {
+			display: inline-block;
+			@include adaptiveValue("padding", 25, 10, $containerWidth, $minWidth, 1);
+		}
+		&:hover {
+			img {
+				transform: scale(1.1);
+			}
+		}
+	}
+
+	&__image {
+		border-radius: 15px;
+		overflow: hidden;
+		img {
+			max-width: 100%;
+			height: auto;
+			border-radius: 15px;
+			transition: all .6s ease 0s;
+		}
+	}
+
+	&__text {
+		text-align: center;
+		@include adaptiveValue("margin-top", 30, 15, $containerWidth, $minWidth, 1);
+	}
+}

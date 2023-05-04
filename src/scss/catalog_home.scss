@@ -1,0 +1,125 @@
+.catalog {
+
+	&__section {
+		@include adaptiveValue("margin-bottom", 100, 40, $containerWidth, $minWidth, 1);
+		@include adaptiveValue("padding-top", 150, 100, $containerWidth, $minWidth, 1);
+		position: relative;
+		.obl {
+			position: absolute;
+			right: 0;
+			top: 0;
+			width: 473px;
+			height: 750px;
+			background-image: url('../img/photoreport/obl.png');
+			background-position: right center;
+			background-size: contain;
+			background-repeat: no-repeat;
+			z-index: -1;
+		}
+		.obl_2 {
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 473px;
+			height: 750px;
+			background-image: url('../img/photoreport/obl_2.png');
+			background-position: left top;
+			background-size: contain;
+			background-repeat: no-repeat;
+			z-index: -1;
+		}
+	}
+
+	&__container {
+	}
+
+	&__title {
+		color: #22542B;
+	}
+
+	&__body {
+		@include adaptiveValue("margin-top", 30, 20, $containerWidth, $minWidth, 1);
+		@include adaptiveValue("margin-bottom", 50, 30, $containerWidth, $minWidth, 1);
+		display: grid;
+		grid-template-columns: repeat(auto-fit,minmax(370px,1fr));
+		@include adaptiveValue("gap", 30, 10, $containerWidth, $minWidth, 1);
+		@media(max-width: 1230px) {
+			grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+		}
+		@media(max-width: 900px) {
+			grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+		}
+	}
+
+	&__text {
+		@include adaptiveValue("margin-top", 30, 20, $containerWidth, $minWidth, 1);
+		@include adaptiveValue("margin-bottom", 30, 20, $containerWidth, $minWidth, 1);
+		color: #6D6D6D;
+	}
+
+	&__subtitle {
+		color: #22542B;
+	}
+
+	&__item {
+		border: 1px dashed #DBD471;
+		border-radius: 15px;
+		@include adaptiveValue("padding", 25, 10, $containerWidth, $minWidth, 1);
+		display: flex;
+		flex-direction: column;
+		background-color: white;
+	}
+
+	&__image {
+		@include adaptiveValue("height", 220, 200, $containerWidth, $minWidth, 1);
+		border-radius: 15px;
+		overflow: hidden;
+		flex: 0 1 auto;
+		a {
+			border-radius: 15px;
+			&:hover {
+				img {
+					transform: scale(1.1);
+				}
+			}
+			img {
+				border-radius: 15px;
+				transition: all .6s ease 0s
+			}
+		}
+	}
+
+	&__name {
+		@include adaptiveValue("margin-top", 25, 10, $containerWidth, $minWidth, 1);
+		flex: 1 1 auto;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		a {
+			color: #22542B;
+		}
+		p {
+			color: #6D6D6D;
+			@include adaptiveValue("margin-top", 5, 2, $containerWidth, $minWidth, 1);
+			@include adaptiveValue("margin-bottom", 5, 2, $containerWidth, $minWidth, 1);
+		}
+		.about {
+			line-height: 17px;
+			color: #18852C;
+			@include adaptiveValue("margin-top", 15, 5, $containerWidth, $minWidth, 1);
+			border: 1px solid rgba(64, 172, 84, 0.4);
+			border-radius: 4px;
+			@include adaptiveValue("padding", 16, 8, $containerWidth, $minWidth, 1);
+			width: 100%;
+			text-align: center;
+			transition: all .3s ease 0s;
+			&:hover {
+				background-color: #18852C;
+				color: white;
+			}
+		}
+	}
+}
+
+
+

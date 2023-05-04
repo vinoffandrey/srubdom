@@ -1,0 +1,67 @@
+.material {
+
+	&__section {
+	}
+
+	&__container {
+	}
+
+	&__title {
+	}
+
+	&__body {
+		display: grid;
+		gap: 20px;
+		@include adaptiveValue("margin-top", 30, 20, $containerWidth, $minWidth, 1);
+		grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+		grid-auto-flow: row dense;
+	}
+
+	&__item {
+		display: flex;
+		flex-direction: column;
+		&.big {
+			grid-column: span 1;
+			grid-row: span 2;
+		}
+	}
+
+	&__img {
+		flex: 1 1 auto;
+		position: relative;
+		@include adaptiveValue("height", 210, 150, $containerWidth, $minWidth, 1);
+		.big & {
+			@include adaptiveValue("height", 420, 300, $containerWidth, $minWidth, 1);
+		}
+		&:after {
+			content: "";
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			left: 0;
+			background-color:  rgba(75, 133, 182, 0);
+			transition: all .5s ease 0s;
+		}
+		@media (any-hover: hover){
+			&:hover{
+				&:after {
+					content: "";
+					position: absolute;
+					width: 100%;
+					height: 100%;
+					top: 0;
+					left: 0;
+					background-color:  rgba(75, 133, 182, .8);
+				}
+			} 
+		}
+	}
+
+	&__name {
+		flex: 0 1 auto;
+		font-weight: 700;
+		@include adaptiveValue("padding", 15, 10, $containerWidth, $minWidth, 1);
+		background-color: #EBF6F9;
+	}
+}

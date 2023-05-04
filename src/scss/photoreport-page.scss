@@ -1,0 +1,32 @@
+.photopage {
+
+	&__section {
+	}
+
+	&__container {
+	}
+
+	&__title {
+	}
+
+	&__text {
+		@include adaptiveValue("margin-top", 30, 20, $containerWidth, $minWidth, 1);
+		p {
+			font-weight: 700;
+		}
+	}
+
+	&__body {
+		@include adaptiveValue("margin-top", 30, 20, $containerWidth, $minWidth, 1);
+		display: flex;
+		flex-direction: column;
+		gap: 15px;
+		max-width: 690px;
+		img {
+			max-width: 100%;
+			height: auto;
+			cursor: pointer;
+		}
+	}
+}
+

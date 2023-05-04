@@ -1,0 +1,473 @@
+// Main__section
+//=======================================================================================================
+.main {
+
+	&__section {
+		position: relative;
+		padding-top: 70px;
+		&:after {
+			z-index: -2;
+			width: 100%;
+			height: 900px;
+			content: "";
+			position: absolute;
+			top: 0;
+			right: 0;
+			background-image: url('../img/main/house.png');
+			background-position: center;
+			background-size: cover;
+			background-repeat: no-repeat;
+			@media(max-width: 1100px) {
+				background-position: left center;
+			}
+		}
+	}
+
+	&__container {
+		display: flex;
+		height: 900px;
+		align-items: center;
+		justify-content: flex-start;
+		@media(max-height: 900px) {
+			height: 100vh;
+		}
+	}
+
+	&__body {
+		max-width: 540px;
+	}
+
+	&__title {
+		color: #22542B;
+		span {
+			color: #D6CB3C;
+		}
+		@include adaptiveValue("margin-bottom", 35, 20, $containerWidth, $minWidth, 1);
+	}
+
+	&__list {
+		color: #6D6D6D;
+		display: flex;
+		flex-direction: column;
+		@include adaptiveValue("gap", 24, 15, $containerWidth, $minWidth, 1);
+		@include adaptiveValue("margin-bottom", 50, 25, $containerWidth, $minWidth, 1);
+		max-width: 320px;
+		li {
+			display: flex;
+			align-items: center;
+			&:before {
+				flex: 0 0 20px;
+				content: "";
+				display: inline-block;
+				width: 20px;
+				height: 20px;
+				background-image: url('../img/main/check.png');
+				background-position: center;
+				background-size: contain;
+				background-repeat: no-repeat;
+				@include adaptiveValue("margin-right", 20, 10, $containerWidth, $minWidth, 1);
+			}
+		}
+		a {
+			text-decoration: underline;
+		}
+	}
+
+	&__button {
+	}
+}
+
+// Advantages__section
+//=======================================================================================================
+
+
+
+.advantages {
+
+	&__section {
+		@include adaptiveValue("margin-top", 50, 25, $containerWidth, $minWidth, 1);
+		position: relative;
+		.obl {
+			position: absolute;
+			right: 0;
+			top: 0;
+			width: 473px;
+			height: 750px;
+			background-image: url('../img/advantages/obl.png');
+			background-position: right center;
+			background-size: contain;
+			background-repeat: no-repeat;
+			z-index: -1;
+		}
+	}
+
+	&__container {
+	}
+
+	&__title {
+		color: #22542B;
+	}
+
+	&__body {
+		@include adaptiveValue("margin-top", 50, 25, $containerWidth, $minWidth, 1);
+		display: flex;
+		justify-content: space-between;
+		gap: 15px;
+		@media(max-width: 900px) {
+			flex-wrap: wrap;
+			gap: 10px;
+		}
+	}
+
+	&__item {
+		background-color: #FFFFFF;
+		border: 1px dashed #DBD471;
+		border-radius: 15px;
+		@include adaptiveValue("padding-top", 44, 20, $containerWidth, $minWidth, 1);
+		@include adaptiveValue("padding-bottom", 27, 15, $containerWidth, $minWidth, 1);
+		@include adaptiveValue("padding-left", 23, 10, $containerWidth, $minWidth, 1);
+		@include adaptiveValue("padding-right", 23, 10, $containerWidth, $minWidth, 1);
+		@media(max-width: 900px) {
+			flex: 0 1 calc(50% - 5px);
+		}
+		@media(max-width: 500px) {
+			flex: 1 1 100%;
+		}
+	}
+
+	&__img {
+		img {
+			@media(max-width: 900px) {
+				max-width: 40px;
+				height: auto;
+			}
+		}
+	}
+
+	&__subtitle {
+		color: #22542B;
+		@include adaptiveValue("margin-top", 25, 10, $containerWidth, $minWidth, 1);
+		@include adaptiveValue("margin-bottom", 15, 5, $containerWidth, $minWidth, 1);
+	}
+
+	&__text {
+		color: #6D6D6D;
+	}
+}
+
+
+// Photos__section
+//=======================================================================================================
+
+
+
+.photos {
+
+	&__section {
+		position: relative;
+		@include adaptiveValue("margin-top", 110, 50, $containerWidth, $minWidth, 1);
+		.obl {
+			position: absolute;
+			left: 0;
+			top: -50%;
+			width: 473px;
+			height: 750px;
+			background-image: url('../img/photo/obl.png');
+			background-position: left center;
+			background-size: contain;
+			background-repeat: no-repeat;
+			z-index: -1;
+			@media(max-width: 900px) {
+				display: none;
+			}
+		}
+	}
+
+	&__container {
+		background-image: url('../img/photo/obl_2.png');
+		background-position: center;
+		background-size: contain;
+		background-repeat: no-repeat;
+	}
+
+	&__title {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	&__body {
+	}
+
+	&__swiper {
+	}
+
+	&__item {
+		border-radius: 15px;
+		a {
+			display: block;
+		}
+		img {
+			width: 100%;
+			height: auto;
+			background-color: #646464;
+			border-radius: 15px;
+			transition: all .6s ease 0s;
+		}
+		&:hover {
+			img {
+				transform: scale(1.1);
+			}
+		}
+	}
+	&__img {
+		overflow: hidden;
+		border-radius: 15px;
+	}
+	&__button {
+		display: flex;
+		justify-content: center;
+		@include adaptiveValue("margin-top", 20, 10, $containerWidth, $minWidth, 1);
+	}
+}
+
+// Consultation__section
+//=======================================================================================================
+
+
+
+.consultation {
+
+	&__section {
+		@include adaptiveValue("margin-top", 100, 40, $containerWidth, $minWidth, 1);
+	}
+
+	&__container {
+	}
+
+	&__body {
+		display: flex;
+		gap: 30px;
+		justify-content: space-between;
+		@media(max-width: 900px) {
+			flex-wrap: wrap;
+			gap: 10px;
+		}
+	}
+
+	&__item {
+		flex: 0 1 25%;
+		border: 1px dashed #DBD471;
+		border-radius: 15px;
+		@include adaptiveValue("padding", 28, 10, $containerWidth, $minWidth, 1);
+		&:hover {
+			img {
+				transform: scale(1.1);
+			}
+		}
+		@media(max-width: 900px) {
+			flex: 0 1 calc(50% - 5px);
+		}
+		@media(max-width: 500px) {
+			flex:  1 1 100%;
+		}
+	}
+
+	&__img {
+		overflow: hidden;
+		border-radius: 15px;
+		@media(max-width: 500px) {
+			text-align: center;
+		}
+		img {
+			border-radius: 15px;
+			width: 100%;
+			height: auto;
+			transition: all .6s ease 0s;
+			@media(max-width: 500px) {
+				height: 300px;
+				width: auto;
+				max-width: 100%;
+			}
+		}
+	}
+
+	&__title {
+		text-align: center;
+		@include adaptiveValue("margin-top", 20, 10, $containerWidth, $minWidth, 1);
+	}
+
+	&__button {
+		@include adaptiveValue("margin-top", 50, 20, $containerWidth, $minWidth, 1);
+		display: flex;
+		justify-content: center;
+	}
+}
+
+
+
+// Stati__section
+//=======================================================================================================
+
+
+
+.stati {
+
+	&__section {
+		position: relative;
+		@include adaptiveValue("margin-top", 110, 50, $containerWidth, $minWidth, 1);
+		.obl {
+			position: absolute;
+			left: 0;
+			top: -80%;
+			width: 473px;
+			height: 750px;
+			background-image: url('../img/stati/obl.png');
+			background-position: left center;
+			background-size: contain;
+			background-repeat: no-repeat;
+			z-index: -1;
+			@media(max-width: 900px) {
+				display: none;
+			}
+		}
+		.obl_2 {
+			position: absolute;
+			right: 0;
+			bottom: -30%;
+			width: 750px;
+			height: 473px;
+			background-image: url('../img/stati/obl_2.png');
+			background-position: right center;
+			background-size: contain;
+			background-repeat: no-repeat;
+			z-index: -1;
+			@media(max-width: 900px) {
+				display: none;
+			}
+		}
+	}
+
+	&__container {
+	}
+
+	&__title {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		gap: 20px;
+	}
+
+	&__body {
+		@include adaptiveValue("margin-top", 20, 10, $containerWidth, $minWidth, 1);
+	}
+
+	&__swiper {
+	}
+
+	&__item {
+		border-radius: 15px;
+		a {
+			display: block;
+		}
+		&:hover {
+			img {
+				transform: scale(1.1);
+			}
+		}
+	}
+
+	&__img {
+		overflow: hidden;
+		border-radius: 15px;
+		img {
+			width: 100%;
+			height: auto;
+			background-color: #646464;
+			border-radius: 15px;
+			transition: all .6s ease 0s;
+		}
+	}
+
+	&__title {
+		@include adaptiveValue("margin-top", 16, 8, $containerWidth, $minWidth, 1);
+		@include adaptiveValue("margin-bottom", 10, 5, $containerWidth, $minWidth, 1);
+	}
+
+	&__text {
+
+	}
+
+	&__button {
+		display: flex;
+		justify-content: center;
+		@include adaptiveValue("margin-top", 40, 20, $containerWidth, $minWidth, 1);
+	}
+}
+
+
+// Contacts__section
+//=======================================================================================================
+
+
+
+.contacts {
+
+	&__section {
+		@include adaptiveValue("margin-top", 100, 40, $containerWidth, $minWidth, 1);
+		@include adaptiveValue("margin-bottom", 100, 40, $containerWidth, $minWidth, 1);
+	}
+
+	&__container {
+	}
+
+	&__title {
+	}
+
+	&__body {
+		display: flex;
+		justify-content: space-between;
+		gap: 20px;
+		@include adaptiveValue("margin-top", 50, 25, $containerWidth, $minWidth, 1);
+		@media(max-width: 900px) {
+			flex-direction: column;
+			gap: 10px;
+		}
+	}
+
+	&__left {
+		flex: 0 1 330px;
+		display: flex;
+		flex-direction: column;
+		min-width: 200px;
+		@media(max-width: 900px) {
+			flex: 0 1 auto;
+		}
+	}
+
+	&__item {
+		@include adaptiveValue("margin-bottom", 30, 15, $containerWidth, $minWidth, 1);
+		a {
+			color: #22542B;
+		}
+	}
+
+	&__right {
+		flex: 0 1 770px;
+		border-radius: 15px;
+		@include adaptiveValue("height", 340, 200, $containerWidth, $minWidth, 1);
+		div {
+			height: 100%!important;
+			border-radius: 15px;
+		}
+		iframe {
+			width: 100%!important;
+			height: 100%!important;
+			border-radius: 15px;
+		}
+		@media(max-width: 900px) {
+			flex: 0 1 auto;
+		}
+	}
+}
+

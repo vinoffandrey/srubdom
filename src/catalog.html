@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/_head.htm',{
+"title":"Каталог"
+})
+
+<body style="overflow-x: hidden;">
+	<div class="wrapper">
+		@@include('html/_header.htm',{})
+		<main class="page">
+			<section class="catalogs__section">
+				<div class="obl"></div>
+				<div class="obl_2"></div>
+				<div class="catalogs__container">
+					<div class="catalogs__title title-30">
+						<h2>Каталог</h2>
+					</div>
+					<div class="catalogs__body">
+						<div class="catalogs__item">
+							<a href="catalog_home.html">
+								<div class="catalogs__image">
+									<img src="img/catalog/product_1.png" alt="">
+								</div>
+								<div class="catalogs__text text-15 bold">
+									<h1>Срубы домов</h1>
+								</div>
+							</a>
+						</div>
+						<div class="catalogs__item">
+							<a href="catalog_bani.html">
+								<div class="catalogs__image">
+									<img src="img/catalog/product_2.png" alt="">
+								</div>
+								<div class="catalogs__text text-15 bold">
+									<h1>Срубы бань</h1>
+								</div>
+							</a>
+						</div>
+						<div class="catalogs__item">
+							<a href="">
+								<div class="catalogs__image">
+									<img src="img/catalog/product_3.png" alt="">
+								</div>
+								<div class="catalogs__text text-15 bold">
+									<h1>Каркасные дома</h1>
+								</div>
+							</a>
+						</div>
+						<div class="catalogs__item">
+							<a href="">
+								<div class="catalogs__image">
+									<img src="img/catalog/product_4.png" alt="">
+								</div>
+								<div class="catalogs__text text-15 bold">
+									<h1>Дополнительные работы</h1>
+								</div>
+							</a>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+		@@include('html/_footer.htm',{})
+	</div>
+
+	@@include('html/_popup.htm',{})
+	@@include('html/_js.htm',{})
+</body>
+
+</html>

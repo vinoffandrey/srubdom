@@ -1,0 +1,79 @@
+.rasrochka {
+
+	&__section {
+		flex: 1 1 auto;
+		@include adaptiveValue("padding-top", 150, 100, $containerWidth, $minWidth, 1);
+		@include adaptiveValue("padding-bottom", 100, 40, $containerWidth, $minWidth, 1);
+		height: 100%;
+		position: relative;
+		.obl {
+			position: absolute;
+			right: 0;
+			top: 0;
+			width: 473px;
+			height: 750px;
+			background-image: url('../img/photoreport/obl.png');
+			background-position: right center;
+			background-size: contain;
+			background-repeat: no-repeat;
+			z-index: -1;
+		}
+		.obl_2 {
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 473px;
+			height: 750px;
+			background-image: url('../img/photoreport/obl_2.png');
+			background-position: left top;
+			background-size: contain;
+			background-repeat: no-repeat;
+			z-index: -1;
+		}
+		.home {
+			position: absolute;
+			right: 0;
+			bottom: 0;
+			background-image: url('../img/rasrochka/home.png');
+			background-size: contain;
+			background-repeat: no-repeat;
+			background-position: right bottom;
+			@include adaptiveValue("width", 875, 275, $containerWidth, $minWidth, 1);
+			@include adaptiveValue("height", 693, 200, $containerWidth, $minWidth, 1);
+			z-index: -1;
+			@media(max-width: 760px) {
+				display: none;
+			}
+		}
+	}
+
+	&__container {
+	}
+
+	&__title {
+	}
+
+	&__body {
+		max-width: 771px;
+		@include adaptiveValue("margin-top", 20, 10, $containerWidth, $minWidth, 1);
+		h2 {
+			@include adaptiveValue("margin-bottom", 10, 5, $containerWidth, $minWidth, 1);
+		}
+	}
+
+	&__buttom {
+		display: flex;
+		align-items: center;
+		@include adaptiveValue("gap", 30, 15, $containerWidth, $minWidth, 1);
+		@include adaptiveValue("margin-top", 25, 10, $containerWidth, $minWidth, 1);
+		p {
+			max-width: 270px;
+			@media(max-width: 500px) {
+				max-width: 100%;
+			}
+		}
+		@media(max-width: 500px) {
+			flex-direction: column;
+		}
+	}
+}

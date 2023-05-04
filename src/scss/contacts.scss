@@ -1,0 +1,35 @@
+.contacts {
+
+	&__section {
+	}
+
+	&__container {
+	}
+
+	&__title {
+	}
+
+	&__body {
+		@include adaptiveValue("margin-top", 30, 20, $containerWidth, $minWidth, 1);
+	}
+
+	&__item {
+		@include adaptiveValue("margin-bottom", 20, 15, $containerWidth, $minWidth, 1);
+	}
+
+	&__subtitle {
+		font-weight: 700;
+	}
+
+	&__text {
+	}
+
+	&__map {
+		@include adaptiveValue("margin-top", 20, 15, $containerWidth, $minWidth, 1);
+		iframe {
+			width: 100%;
+			@include adaptiveValue("height", 400, 200, $containerWidth, $minWidth, 1);
+		}
+	}
+}
+
